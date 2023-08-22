@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './components/Navbar';
-import { BrowserRouter as Router, Switch, Route } from
+import { BrowserRouter as Router, Routes, Route } from
 'react-router-dom';
 import './App.css';
 import Home from './components/pages/Home'
@@ -18,7 +18,7 @@ function App() {
     <>
     <Router>
       <Navbar />
-      <Switch>
+      <Routes>
         <Route path='/' exact component={ Home } />
         <Route path='/services' component={ Services } />
         <Route path='/products' component={ Products } />
@@ -27,7 +27,7 @@ function App() {
         <Route path='/admin_products' component={ Admin_Products } />
         <Route path='/admin_users' component={ Admin_Users } />
         <Route path='/carrito' component={ Carrito } />
-      </Switch>
+      </Routes>
     </Router>
     </>
   );
